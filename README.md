@@ -1,18 +1,16 @@
 ﻿# Frontend Productos (Angular 20)
 
-## Requisitos
-- Node LTS
-- Angular CLI
+Este proyecto Angular 20 consume una API de **Spring Boot** de productos y está desplegado en una **VPS de Oracle Cloud** detrás de **Nginx**.
 
-## Desarrollo
+## Repositorios
+- **Frontend (este repo):** https://github.com/DanielaCC27/frontend-productos  
+- **Backend (Spring Boot):** https://github.com/Steban1308/backend-productos  
+
+## Demo en vivo
+- **Frontend:** http://157.137.231.87  
+- **API pública:** http://157.137.231.87/api/productos  
+
+## Cómo correr en desarrollo
+```bash
 npm i
 ng serve
-
-## Build producción
-ng build --configuration production
-
-## Consumo de API
-El frontend consume \/api/productos\ (Nginx lo proxy a Spring Boot en 8080).
-
-## Demo desplegada
-http://157.137.231.87
