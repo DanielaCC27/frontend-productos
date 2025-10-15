@@ -1,0 +1,19 @@
+<h2>{{ titulo }}</h2>
+
+<ng-container *ngIf="productos$ | async as productos; else cargando">
+  <div *ngFor="let p of productos; trackBy: trackById">
+    <strong>ID:</strong> {{ p.id }} <br>
+    <strong>Nombre:</strong> {{ p.nombre }} <br>
+    <strong>Precio:</strong> {{ p.precio }} <br>
+    <strong>Stock:</strong> {{ p.stock }}
+    <hr>
+  </div>
+
+  <ng-container *ngIf="!productos.length">
+    <em>No hay productos.</em>
+  </ng-container>
+</ng-container>
+
+<ng-template #cargando>
+  <em>Cargando productos…</em>
+</ng-template>
